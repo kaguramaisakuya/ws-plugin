@@ -549,6 +549,9 @@ async function getApiData (api, params = {}, name, uin, adapter, other = {}) {
       if (!ResponseData.nickname) {
         ResponseData.nickname = ResponseData.card || 'QQ用户'
       }
+      if (!ResponseData.sex) {
+        ResponseData.sex = 'unknown'
+      }
     },
     // 获取群成员列表
     get_group_member_list: async (params) => {
